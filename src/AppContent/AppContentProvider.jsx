@@ -19,7 +19,7 @@ const AppContentProvider = ({ children}) => {
 
   const navigate = useNavigate();
   const value = {
-    blogs, setBlogs,navigate,
+    blogs, setBlogs,navigate, getBlogs
   }
 
   return(

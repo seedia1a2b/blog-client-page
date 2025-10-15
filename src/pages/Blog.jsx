@@ -11,14 +11,16 @@ const Blog = () => {
   const [blog, setBlog] = useState([])
 
   const {id} = useParams()
+
   const { blogs } = useAppContext()
 
 
   useEffect(()=> {
-      const filter = blogs.filter(item => item._id === id);
-      console.log(filter)
-      setBlog(filter[0])
-  },[id])
+    const filter = blogs.filter(item => item._id === id);
+    console.log(filter)
+    setBlog(filter[0])
+  },[id, blogs])
+
 
 
   return (
