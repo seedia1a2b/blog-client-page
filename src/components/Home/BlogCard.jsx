@@ -6,8 +6,8 @@ const BlogCard = ({image, category, title, description, id}) => {
 
   return (
     <div className='flex flex-col items-start gap-y-4 rounded-xl shadow-lg overflow-hidden'>
-      <div className=''>
-       <img onClick={()=> navigate(`/blog/${id}`)} className='w-full object-contain cursor-pointer' src={image} alt="" />
+      <div className='w-full max-h-50 min-h-50'>
+       <img onClick={()=> navigate(`/blog/${id}`)} className='w-full h-full cursor-pointer object-cover' src={image} alt="" />
       </div>
       <div className='flex flex-col gap-2 px-4 py-2'>
         <div>
