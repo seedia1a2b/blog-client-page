@@ -18,14 +18,12 @@ const Comment = () => {
       }
       const {data} = await axios.post('http://localhost:4000/api/v1/blog/blog-comment', {blogId: id});
       if(data.success){
-        console.log(data)
         setComment(data.data);
       }else {
         toast.error(data.message)
       }
   
     } catch (error) {
-      console.log(error)
       toast.error(error.message)
     }
   }
@@ -41,12 +39,12 @@ const Comment = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-2 justify-start'>
         {
           comment.length > 0 ? comment.map((comment, index)=> (
-            <div key={index} className='flex justify-between  items-start max-w-sm bg-blue-50/40 py-2'>
+            <div key={index} className='flex justify-between  items-start max-w-sm bg-blue-900 rounded-sm px-2 py-2 text-white'>
               <div className='flex gap-2 items-start'>
                 <img className='w-8' src={assets.user_icon} alt="" />
                 <div>
                   <p className='text-xs font-semibold'>{comment.name}</p>
-                  <p className='text-gray-700 text-xs'>{comment.content}</p>
+                  <p className='text-gray-200 text-xs'>{comment.content}</p>
                 </div>
               </div>
               <div className='text-xs'>
