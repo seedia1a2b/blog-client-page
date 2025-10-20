@@ -27,7 +27,7 @@ const BlogList = () => {
         <p onClick={()=> setSelect('Lifestyle')} className={`${select === 'Lifestyle' ? 'bg-primary text-white px-4 rounded-full': ' bg-gray-200 px-2 rounded-full border-gray-400 border'} cursor-pointer`}>Lifestyle</p>
         <p onClick={()=> setSelect('Finance')} className={`${select === 'Finance' ? 'bg-primary text-white px-4 rounded-full': ' bg-gray-200 px-2 rounded-full border-gray-400 border'} cursor-pointer`}>Finance</p>
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 gap-y-6 py-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6 py-8'>
         {
           filtered.length > 0 &&
           filtered.map((item, index) => (
