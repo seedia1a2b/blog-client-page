@@ -7,7 +7,7 @@ import jack from '../../assets/jack2.jpg'
 
 export const TextParallaxContentExample = () => {
   return (
-    <div className="bg-white pt-10 sm:max-w-[80%] mx-auto">
+    <div className="bg-white pt-10 sm:max-w-6xl mx-auto">
       <div className="flex items-center justify-center gap-2 py-4">
         <div className="h-1 w-10 bg-black"></div>
         <h1 className="text-4xl xl:text-5xl text-center font-bold">About Us</h1>
@@ -74,7 +74,7 @@ const StickyImage = ({ imgUrl }) => {
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "top",
-        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
+        height: `calc(90vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
       }}
