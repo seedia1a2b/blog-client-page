@@ -16,7 +16,7 @@ const Comment = () => {
       if(!id || !backend_url){
         return toast.error('Id not found')
       }
-      const {data} = await axios.post('http://localhost:4000/api/v1/blog/blog-comment', {blogId: id});
+      const {data} = await axios.post(`https://server-blog-three.vercel.app/api/v1/blog/blog-comment`, {blogId: id});
       if(data.success){
         setComment(data.data);
       }else {
